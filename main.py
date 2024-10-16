@@ -9,6 +9,6 @@ led = Pin(2,Pin.OUT)
 
 while True:
   led.value(1)
-  ultime.sleep(1)
+  utime.sleep(1)
   led.value(0)
-  ultime.sleep(1)
+  utime.sleep(1)
