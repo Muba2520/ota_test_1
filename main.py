@@ -13,6 +13,7 @@ while True:
    ftime= time2 - time1
    if ftime >= 10:
       ota_updater.download_and_install_update_if_available()
+      
    for i in range(10):
       led.value(1)
       utime.sleep(1)
