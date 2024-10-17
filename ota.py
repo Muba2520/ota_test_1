@@ -109,7 +109,7 @@ class OTAUpdater:
         # Turn list to dict using dictionary comprehension
 #         my_dict = {data[i]: data[i + 1] for i in range(0, len(data), 2)}
         
-        self.latest_version = int(data['version'])
+        self.latest_version = data['version']
         print(f'latest version is: {self.latest_version}')
         
         # compare versions
