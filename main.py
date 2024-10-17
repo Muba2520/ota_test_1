@@ -8,7 +8,9 @@ print("this is another line test, written on an iPad using VS Code for web.")
 led = Pin(2,Pin.OUT)
 
 while True:
-  led.value(1)
-  utime.sleep(2)
-  led.value(0)
-  utime.sleep(2)
+ num = int(input("Etter a number : "))
+  for i in range(num):
+    led.value(1)
+    utime.sleep(1)
+    led.value(0)
+    utime.sleep(1)
