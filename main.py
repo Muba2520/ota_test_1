@@ -29,6 +29,6 @@ timer.init(period=30000, mode=machine.Timer.PERIODIC, callback=check_update)
 
 while True: 
       led.value(1)
-      utime.sleep(3)
+      utime.sleep(5)
       led.value(0)
-      utime.sleep(3)
+      utime.sleep(5)
