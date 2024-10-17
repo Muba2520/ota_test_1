@@ -24,11 +24,11 @@ def check_update(timer):
       ota_updater.download_and_install_update_if_available()
 
 timer = machine.Timer(0)
-timer.init(period=300000, mode=machine.Timer.PERIODIC, callback=check_update)
+timer.init(period=30000, mode=machine.Timer.PERIODIC, callback=check_update)
 
 
 while True: 
       led.value(1)
-      utime.sleep(0.1)
+      utime.sleep(1)
       led.value(0)
-      utime.sleep(0.1)
+      utime.sleep(1)
