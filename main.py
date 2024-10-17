@@ -9,8 +9,8 @@ led = Pin(2,Pin.OUT)
 
 while True:
  num = int(input("Etter a number : "))
-  for i in range(num):
-    led.value(1)
-    utime.sleep(1)
-    led.value(0)
-    utime.sleep(1)
+ for i in range(num):
+   led.value(1)
+   utime.sleep(1)
+   led.value(0)
+   utime.sleep(1)
