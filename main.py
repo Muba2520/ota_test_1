@@ -1,6 +1,7 @@
 # This is a test file of the OTA code
 from machine import Pin
 import utime
+import machine
 from ota import OTAUpdater
 
 
