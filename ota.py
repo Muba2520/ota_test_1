@@ -18,7 +18,7 @@ class OTAUpdater:
         elif "github.com" in self.repo_url:
             print(f"Updating {repo_url} to raw.githubusercontent'")
             self.repo_url = self.repo_url.replace("github","raw.githubusercontent")            
-        self.version_url = self.repo_url + 'main/version.json'
+        self.version_url = self.repo_url + 'main/version.json?v=1'
         print(f"version url is: {self.version_url}")
         self.firmware_url = self.repo_url + 'main/' + filename
 
