@@ -24,7 +24,7 @@ def check_update(timer):
       ota_updater.download_and_install_update_if_available()
 
 timer = machine.Timer(0)
-timer.init(period=300000, mode=machine.Timer.PERIODIC, callback=check_update)
+timer.init(period=30000, mode=machine.Timer.PERIODIC, callback=check_update)
 
 
 while True: 
