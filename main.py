@@ -1,5 +1,4 @@
 # This is a test file of the OTA code
-from machine import Pin
 import utime
 import machine
 from ota import OTAUpdater
@@ -17,7 +16,7 @@ PASSWORD = "Test@0115"
 firmware_url = "https://github.com/Muba2520/ota_test_1/"
 ota_updater = OTAUpdater(SSID,PASSWORD,firmware_url,"main.py")
 
-led = Pin(2,Pin.OUT)
+led = machine.Pin(2,machine.Pin.OUT)
 time1 = utime.time()
 print(time1)
 
