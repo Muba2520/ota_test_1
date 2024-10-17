@@ -20,11 +20,15 @@ led = Pin(2,Pin.OUT)
 time1 = utime.time()
 print(time1)
 
-while True:   
-   time2 = utime.time()
-   ftime = time2 - time1
-   if ftime >= 10:
+def check_update(timer):   
       ota_updater.download_and_install_update_if_available()
+
+timer = machine.Timer(0)
+timer.init(period=10000, mode=machine.Timer.PERIODIC, callback=check_update)
+
+
+while True: 
+   
       
    for i in range(10):
       led.value(1)
