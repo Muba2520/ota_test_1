@@ -1,9 +1,20 @@
 # This is a test file of the OTA code
 from machine import Pin
 import utime
+from ota import OTAUpdater
+
+
 print('Hello World')
 print("Hello")
 print("this is another line test, written on an iPad using VS Code for web.")
+
+
+
+SSID = "Particle"
+PASSWORD = "Test@0115"
+
+firmware_url = "https://github.com/Muba2520/ota_test_1/"
+ota_updater = OTAUpdater(SSID,PASSWORD,firmware_url,"main.py")
 
 led = Pin(2,Pin.OUT)
 time1 = utime.time()
