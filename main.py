@@ -8,7 +8,7 @@ print('Hello World')
 print("Hello")
 print("this is another line test, written on an iPad using VS Code for web.")
 
-led = machine.Pin(25,Pin.OUT)
+led = machine.Pin('LED',Pin.OUT)
 
 while True:
       led.value(1)
