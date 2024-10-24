@@ -4,6 +4,8 @@ import utime
 from ota import OTAUpdater
 from machine import Timer,Pin
 
+SSID = "Particle"
+PASSWORD = "Test@0115"
 # Define a callback function that will be called by the timer interrupt
 def timer_callback(timer):
     ota_updater = OTAUpdater(SSID,PASSWORD,firmware_url,"main.py")
