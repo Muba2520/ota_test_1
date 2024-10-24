@@ -91,6 +91,7 @@ class OTAUpdater:
 
         # Restart the device to run the new code.
         print('Restarting device...')
+        sleep(5)
         machine.reset()  # Reset the device to run the new code.
         
     def check_for_updates(self):
