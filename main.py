@@ -1,7 +1,19 @@
 # This is a test file of the OTA code
 import utime
-import machine
+#import machine
 from ota import OTAUpdater
+from machine import Timer,Pin
+
+# Define a callback function that will be called by the timer interrupt
+def timer_callback(timer):
+    ota_updater = OTAUpdater(SSID,PASSWORD,firmware_url,"main.py")
+    ota_updater.download_and_install_update_if_available()
+
+# Create a timer object
+timer = Timer()
+
+# Configure the timer to call the timer_callback function every 5 minute (300000 ms)
+timer.init(period=300000, mode=Timer.PERIODIC, callback=timer_callback)
 
 
 print('Hello World')
@@ -12,7 +24,7 @@ led = machine.Pin('LED',machine.Pin.OUT)
 
 while True:
       led.value(1)
-      utime.sleep(2)
+      utime.sleep(0.1)
       led.value(0)
-      utime.sleep(2)
+      utime.sleep(0.1)
       
