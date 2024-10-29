@@ -6,9 +6,10 @@ from machine import Timer,Pin
 
 SSID = "Particle"
 PASSWORD = "Test@0115"
+
+ota_updater = OTAUpdater(SSID,PASSWORD,firmware_url,"main.py")
 # Define a callback function that will be called by the timer interrupt
 def timer_callback(timer):
-    ota_updater = OTAUpdater(SSID,PASSWORD,firmware_url,"main.py")
     ota_updater.download_and_install_update_if_available()
 
 # Create a timer object
