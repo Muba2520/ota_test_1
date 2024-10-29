@@ -5,6 +5,7 @@ from machine import Timer,Pin
 
 SSID = "Particle"
 PASSWORD = "Test@0115"
+firmware_url = "https://github.com/Muba2520/ota_test_1/"
 
 ota_updater = OTAUpdater(SSID,PASSWORD,firmware_url,"main.py")
 # Define a callback function that will be called by the timer interrupt
