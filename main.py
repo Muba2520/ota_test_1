@@ -3,8 +3,8 @@ import utime
 from ota import OTAUpdater
 from machine import Timer,Pin
 
-SSID = "Realme X3"
-PASSWORD = "0987654321"
+SSID = "Particle"
+PASSWORD = "Test@0115"
 firmware_url = "https://github.com/Muba2520/ota_test_1/"
 
 ota_updater = OTAUpdater(SSID,PASSWORD,firmware_url,"main.py")
